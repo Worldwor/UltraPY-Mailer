@@ -4,17 +4,6 @@ Email Sending Script - README
 
 This script is designed to send emails to a list of recipients using SMTP. It supports merging dynamic data fields, such as recipient email addresses and random values, into the subject and message of the email.
 
-sudo apt-get update
-sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
-curl https://pyenv.run | bash
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-source ~/.bashrc
-pyenv install 3.9.6
-pyenv virtualenv 3.9.6 myenv
-pyenv activate myenv
-
 python3 -m venv myenv
 i. source myenv/bin/activate
 ii. python main.py
@@ -39,4 +28,13 @@ Merge Fields:
 {{Number10}}: A random 10 Number
 {{Fake_company}}: A Fake company names
 {{CHARSET}}:  A CHARSET
-{{Encoded_link}}: A Link Encoder
+{{Encoded_link}}: A link with a random number, random string, and recipient's base64-encoded email.
+Functions:
+
+<html>
+<body>
+    <h1>Your Email Content</h1>
+    <img src="cid:image_cid" alt="Generated Image">
+    <!-- Rest of your email content -->
+</body>
+</html>
